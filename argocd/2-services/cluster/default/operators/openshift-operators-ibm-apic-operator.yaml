@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-operators-ibm-apic-operator
+spec:
+  destination:
+    namespace: openshift-operators
+    server: https://kubernetes.default.svc
+  project: 2-services
+  source:
+    path: payload/2-services/namespace/openshift-operators/ibm-apic-operator
+    repoURL: https://github.com/vijayksorg/gitops-test-cp4i-all-5-1
+    targetRevision: main
+    helm:
+      releaseName: ibm-apic-operator
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences: []
