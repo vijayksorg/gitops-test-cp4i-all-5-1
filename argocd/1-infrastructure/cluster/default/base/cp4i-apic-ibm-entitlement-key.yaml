@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cp4i-apic-ibm-entitlement-key
+spec:
+  destination:
+    namespace: cp4i-apic
+    server: https://kubernetes.default.svc
+  project: 1-infrastructure
+  source:
+    path: payload/1-infrastructure/namespace/cp4i-apic/ibm-entitlement-key
+    repoURL: https://github.com/vijayksorg/gitops-test-cp4i-all-5-1
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences: []
