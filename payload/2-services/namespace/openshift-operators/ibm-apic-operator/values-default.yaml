@@ -1,0 +1,11 @@
+"ibm-apic-operator":
+  "subscriptions":
+    "apic":
+      "name": "ibm-apic"
+      "subscription":
+        "channel": "v2.4"
+        "installPlanApproval": "Automatic"
+        "name": "ibm-apic"
+        "source": "ibm-operator-catalog"
+        "sourceNamespace": "openshift-marketplace"
+
