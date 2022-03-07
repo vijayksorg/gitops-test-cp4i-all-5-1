@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-operators-ibm-platform-navigator
+spec:
+  destination:
+    namespace: openshift-operators
+    server: https://kubernetes.default.svc
+  project: 2-services
+  source:
+    path: payload/2-services/namespace/openshift-operators/ibm-platform-navigator
+    repoURL: https://github.com/vijayksorg/gitops-test-cp4i-all-5-1
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+        - values-default.yaml
+      releaseName: ibm-platform-navigator
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences: []
