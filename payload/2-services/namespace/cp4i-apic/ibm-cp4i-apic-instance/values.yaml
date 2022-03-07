@@ -1,0 +1,11 @@
+"ibm_apic_instance":
+  "license":
+    "accept": true
+    "license_id": "L-RJON-C7BJ42"
+    "use": "nonproduction"
+  "name": "apicinstance"
+  "namespace": "cp4i-apic"
+  "profile": "n1xc7.m48"
+  "storageClass": "ibmc-block-gold"
+  "version": "10.0.4.0-ifix1-54"
+
