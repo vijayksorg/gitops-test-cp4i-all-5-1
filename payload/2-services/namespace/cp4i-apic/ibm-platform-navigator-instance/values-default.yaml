@@ -1,0 +1,13 @@
+"ibm-platform-navigator-instance":
+  "ibmplatformnavigator":
+    "name": "integration-navigator"
+    "spec":
+      "license":
+        "accept": true
+        "license": "L-RJON-C7QG3S"
+      "mqDashboard": true
+      "replicas": 2
+      "storage":
+        "class": "ibmc-file-gold-gid"
+      "version": "2021.4.1"
+
